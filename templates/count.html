@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>COUNT</h1>
+
+	<a href="{% url 'rodjeni' %}">start again</a>
+	<a href="{% url 'about' %}">About</a>
+
+	<h2>There are {{ count }} words in your text</h2>
+	<h3>Your Text:</h3>
+	{{ fulltext }}
+	<br/>
+	
+	<br/>
+
+	{% for word, counttotal in rec %}
+	<br/>
+	{{word}}
+	<br/>
+	{{counttotal}}
+
+	{% endfor %}
+
+</body>
+</html>
